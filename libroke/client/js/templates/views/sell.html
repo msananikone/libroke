@@ -1,0 +1,28 @@
+<template name="sell">
+
+<div class="container location">
+<div>
+  <h1>Sell Textbook</h1>
+                <form role="form-sell">
+                  <div class="form-group has-feedback">
+                    <label class="sr-only title">Book Title</label>
+                    <input type="text" class="form-control" placeholder="Book Title" name="title" value="{{textbookPending.Title}}" required>
+                    <i class="fa fa-user form-control-feedback"></i>
+                  </div>
+                  <div class="form-group has-feedback">
+                    <label class="sr-only price">Price</label>
+                    <input type="text" class="form-control" placeholder="Price" name="price" value="{{textbookPending.Price}}" required>
+                    <i class="fa fa-envelope form-control-feedback"></i>
+                  </div>
+				  <button type="button" class="btn btn-primary">Upload Photo</button>
+                  <button type="submit" class="btn btn-primary">Add</button>
+                </form>
+              </div>
+</div>
+<code>
+          Textbooks.insert({title: "{{textbookPending.Title}}", price: "{{textbookPending.Price}}" });
+      </code>
+
+
+</template>
+
